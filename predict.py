@@ -1,4 +1,5 @@
 import torch
+from torch import conv2d
 from torch import nn
 from torch.utils.data import DataLoader
 from torchvision import datasets
@@ -47,7 +48,6 @@ device = (
   else "cpu"
 )
 print(f"Using {device} device")
-
 
 model = NeuralNetwork().to(device)
 model.load_state_dict(torch.load("model.pth"))
